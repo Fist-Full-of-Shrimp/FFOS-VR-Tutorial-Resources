@@ -9,12 +9,12 @@ public class InputData : MonoBehaviour
     public InputDevice _leftController;
     public InputDevice _HMD;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
+    void Update()
+    {
+        if (!_rightController.isValid || !_leftController.isValid || !_HMD.isValid)
+            InitializeInputDevices();
+    }
     private void InitializeInputDevices()
     {
         
@@ -40,10 +40,5 @@ public class InputData : MonoBehaviour
             inputDevice = devices[0];
         }
     }
-    // Update is called once per frame
-    void Update()
-    {
-        if(!_rightController.isValid || !_rightController.isValid || !_HMD.isValid)
-            InitializeInputDevices();
-    }
+
 }

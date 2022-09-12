@@ -7,8 +7,6 @@ using TMPro;
 [RequireComponent(typeof(InputData))]
 public class DisplayInputData : MonoBehaviour
 {
-
-
     public TextMeshProUGUI leftScoreDisplay;
     public TextMeshProUGUI rightScoreDisplay;
 
